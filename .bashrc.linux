@@ -49,6 +49,7 @@ export PAGER=less
 export EDITOR=nvim
 alias fig=docker-compose
 alias ack=ag
+alias grep=rg
 alias create-perl-backend='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/create-perl-backend'
 alias jspm='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/jspm jspm'
 alias surge='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/surge surge'
