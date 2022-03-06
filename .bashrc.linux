@@ -46,7 +46,7 @@ bind '"jj":vi-movement-mode'
 
 
 export PAGER=less
-export EDITOR=/usr/bin/vim
+export EDITOR=nvim
 alias fig=docker-compose
 alias ack=ag
 alias create-perl-backend='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/create-perl-backend'
@@ -64,9 +64,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Ash Mode Enabled
-alias vim='echo Use vf or vo instead, fuzzyfinderers'
-alias vi='echo Use vf or vo instead, fuzzyfinderers'
-alias ireallyneedvim="/usr/bin/vim"
+alias vim=nvim
+alias vi=nvim
 alias vimnotes='ireallyneedvim ~/.vimnotes'
 alias bashrc="ireallyneedvim ~/.bashrc"
 alias docker-restart="osascript -e 'quit app \"Docker\"' && open -a Docker"
@@ -97,7 +96,7 @@ vo() {
 }
 
 vim-if-defined() {
-  [[ ! -z "$1" ]] && /usr/bin/vim $1
+  [[ ! -z "$1" ]] && nvim $1
 }
 
 to-json() { perl -MJSON -e 'print encode_json({@ARGV})' "$@"; }
