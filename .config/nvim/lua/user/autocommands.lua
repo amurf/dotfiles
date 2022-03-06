@@ -28,6 +28,16 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup trailing_whitespace 
+    autocmd!
+
+    autocmd ColorScheme * highlight TrailingWhitespace ctermbg=red guibg=red
+    autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+    autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+    autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+augroup END
+
 ]]
 
 -- Autoformat
