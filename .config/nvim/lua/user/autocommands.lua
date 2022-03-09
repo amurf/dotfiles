@@ -36,12 +36,12 @@ vim.cmd [[
     autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
     autocmd InsertLeave * match TrailingWhitespace /\s\+$/
     autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
-augroup END
+  augroup END
 
+  augroup _lsp
+    autocmd!
+    autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()
+  augroup end
 ]]
 
 -- Autoformat
--- augroup _lsp
---   autocmd!
---   autocmd BufWritePre * lua vim.lsp.buf.formatting()
--- augroup end
