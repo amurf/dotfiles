@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "yamatsum/nvim-cursorline"
-
+  use 'sunjon/shade.nvim'
   use "mhartington/formatter.nvim"
 
   -- Colorschemes
