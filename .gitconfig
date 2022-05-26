@@ -50,3 +50,5 @@
   updated = green bold
 [commit]
 	verbose = true
+[gitflow "release.finish"]
+	notag = true
