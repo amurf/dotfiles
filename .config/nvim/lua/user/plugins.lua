@@ -1,4 +1,4 @@
-  local fn = vim.fn
+local fn = vim.fn
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
@@ -42,14 +42,18 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+
+  -- Load first
+  use "lewis6991/impatient.nvim"
+  use "nathom/filetype.nvim"
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "kyazdani42/nvim-web-devicons"
+
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
@@ -65,11 +69,12 @@ return packer.startup(function(use)
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "David-Kunz/cmp-npm"
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -83,6 +88,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "folke/trouble.nvim"
 
   -- Treesitter
   use {
@@ -91,19 +97,19 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-	use { 'alexghergh/nvim-tmux-navigation', config = function()
-					require'nvim-tmux-navigation'.setup {
-							disable_when_zoomed = true -- defaults to false
-					}
+  use { 'alexghergh/nvim-tmux-navigation', config = function()
+    require 'nvim-tmux-navigation'.setup {
+      disable_when_zoomed = true -- defaults to false
+    }
 
-					vim.api.nvim_set_keymap('n', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
-					vim.api.nvim_set_keymap('n', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
-					vim.api.nvim_set_keymap('n', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
-					vim.api.nvim_set_keymap('n', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
-					vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
-					vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
-			end
-	}  
+    vim.api.nvim_set_keymap('n', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
+  end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
