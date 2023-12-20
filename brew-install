@@ -1,4 +1,5 @@
 brew install fzf tmux wget ag ripgrep fd jq neovim node
 
 brew tap homebrew/cask-fonts
-brew install font-fira-code-nerd-font
+brew install font-iosevka-nerd-font
+# brew install font-fira-code-nerd-font
