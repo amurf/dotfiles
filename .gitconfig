@@ -1,12 +1,12 @@
 [user]
 	name = ash
-	email = ash@strategicdata.com.au
+	email = ashley.murphy@megaport.com
 [push]
     default = matching
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 	ignorecase = false
 # Dracula Dark Theme
 [color]
@@ -52,3 +52,5 @@
 	verbose = true
 [gitflow "release.finish"]
 	notag = true
+[pull]
+	rebase = true
