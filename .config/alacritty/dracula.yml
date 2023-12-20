@@ -13,8 +13,8 @@ colors:
     foreground: '#f8f8f2'
     bright_foreground: '#ffffff'
   cursor:
-    text: CellBackground
-    cursor: CellForeground
+    text: "#282a36"
+    cursor: "#f8f8f2"
   vi_mode_cursor:
     text: CellBackground
     cursor: CellForeground
@@ -25,9 +25,9 @@ colors:
     focused_match:
       foreground: '#44475a'
       background: '#ffb86c'
-    bar:
-      background: '#282a36'
-      foreground: '#f8f8f2'
+  footer_bar:
+    background: '#282a36'
+    foreground: '#f8f8f2'
   hints:
     start:
       foreground: '#282a36'
