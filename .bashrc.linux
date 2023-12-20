@@ -1,5 +1,4 @@
 source ~/.git-completion
-source ~/.bash_prompt
 
 envvar_contains() {
   local pathsep=${PATHSEP:-:}
@@ -46,7 +45,7 @@ bind '"jj":vi-movement-mode'
 
 
 export PAGER=less
-export EDITOR=nvim
+export EDITOR=vim
 alias fig=docker-compose
 alias ack=ag
 alias grep=rg
@@ -54,7 +53,6 @@ alias create-perl-backend='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/cr
 alias jspm='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/jspm jspm'
 alias surge='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/surge surge'
 alias node-run='docker run -it --rm -p 8080:8080 -v "$PWD:/node-run" amurf/node-run'
-alias mix='docker run -it --rm  -v "$PWD:$PWD" -w "$PWD" elixir:alpine mix'
 alias rustc='docker run -it --rm  -v "$PWD:/source" jimmycuadra/rust rustc'
 alias cargo='docker run -it --rm  -v "$PWD:/source" jimmycuadra/rust cargo'
 alias docker-clean='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
@@ -65,8 +63,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Ash Mode Enabled
-alias vim=nvim
-alias vi=nvim
+alias vim=vim
+alias vi=vim
 alias vimnotes='ireallyneedvim ~/.vimnotes'
 alias bashrc="ireallyneedvim ~/.bashrc"
 alias docker-restart="osascript -e 'quit app \"Docker\"' && open -a Docker"
@@ -97,7 +95,7 @@ vo() {
 }
 
 vim-if-defined() {
-  [[ ! -z "$1" ]] && nvim $1
+  [[ ! -z "$1" ]] && vim $1
 }
 
 to-json() { perl -MJSON -e 'print encode_json({@ARGV})' "$@"; }
