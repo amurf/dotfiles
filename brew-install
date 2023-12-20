@@ -1,4 +1,4 @@
-brew install fzf tmux wget ag ripgrep fd jq neovim node starship
+brew install fzf tmux wget ag ripgrep fd jq neovim node starship bash
 
 brew install --cask alacritty
 
