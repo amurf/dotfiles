@@ -1,6 +1,9 @@
-brew install fzf tmux wget ag ripgrep fd jq neovim node starship bash
+brew install fzf tmux wget ag ripgrep bat fd jq neovim starship bash asdf
 
 brew install --cask alacritty
+brew install --cask raycast
+brew install --cask visual-studio-code
+brew install --cask webstorm
 
 brew tap homebrew/cask-fonts
 brew install font-iosevka-nerd-font
