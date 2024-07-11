@@ -1,4 +1,4 @@
-brew install fzf tmux wget ag ripgrep bat fd jq neovim starship bash asdf
+brew install difftastic fzf tmux wget ag ripgrep bat fd jq neovim starship bash asdf
 
 brew install --cask alacritty
 brew install --cask raycast
