@@ -1,4 +1,5 @@
 source ~/.git-completion
+eval "$(fzf --bash)" 
 
 envvar_contains() {
   local pathsep=${PATHSEP:-:}
@@ -44,11 +45,15 @@ set -o vi
 bind '"jj":vi-movement-mode'
 
 
+export GIT_EXTERNAL_DIFF=difft
+export BAT_THEME="Dracula"
 export PAGER=less
 export EDITOR=vim
+
 alias fig=docker-compose
 alias ack=ag
 alias grep=rg
+alias cat=bat
 alias create-perl-backend='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/create-perl-backend'
 alias jspm='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/jspm jspm'
 alias surge='docker run -it --rm -v "$PWD:$PWD" -w "$PWD" amurf/surge surge'
@@ -69,8 +74,7 @@ alias vimnotes='ireallyneedvim ~/.vimnotes'
 alias bashrc="ireallyneedvim ~/.bashrc"
 alias docker-restart="osascript -e 'quit app \"Docker\"' && open -a Docker"
 alias start-vnc="sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all"
-
-alias http="docker run --rm -v $PWD:/usr/share/nginx/html:ro -p 8000:80 -d nginx:alpine"
+alias http="python3 -m http.server"
 
 fd() {
   local dir
