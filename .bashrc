@@ -18,5 +18,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+export PATH=$PATH:/Users/ash/.local/bin
+
 source ~/.bashrc.linux
 

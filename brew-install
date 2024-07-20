@@ -1,10 +1,7 @@
-brew install difftastic fzf tmux wget ag ripgrep bat fd jq neovim starship bash asdf
+brew install difftastic fzf tmux wget ag ripgrep bat fd jq starship bash neovim fish asdf
 
 brew install --cask alacritty
 brew install --cask raycast
 brew install --cask visual-studio-code
 brew install --cask webstorm
-
-brew tap homebrew/cask-fonts
-brew install font-iosevka-nerd-font
-# brew install font-fira-code-nerd-font
+brew install --cask font-iosevka-nerd-font

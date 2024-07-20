@@ -1,14 +1,13 @@
 [user]
-	name = ash
-	email = ashley.murphy@megaport.com
+  name = ash
+  email = irashp@gmail.com
 [push]
-    default = matching
+  default = matching
 [alias]
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
-	excludesfile = ~/.gitignore_global
-	ignorecase = false
-# Dracula Dark Theme
+  excludesfile = ~/.gitignore_global
+  ignorecase = false
 [color]
   ui = auto
 [color "branch"]
@@ -49,10 +48,8 @@
   untracked = red
   updated = green bold
 [commit]
-	verbose = true
-[gitflow "release.finish"]
-	notag = true
+  verbose = true
 [pull]
-	rebase = true
+  rebase = true
 [rerere]
-	enabled = true
+  enabled = true
