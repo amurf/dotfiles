@@ -1,6 +1,6 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 eval "$(/opt/homebrew/bin/brew shellenv)"
-source ~/.orbstack/shell/init.bash
+[ -s "~/.orbstack/shell.init.bash" ] && source ~/.orbstack/shell/init.bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -10,7 +10,6 @@ export NVM_DIR="$HOME/.nvm"
 . "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
 
 eval "$(starship init bash)"
-eval "$(pyenv init -)"
 # pnpm
 export PNPM_HOME="/Users/ashley.murphy/Library/pnpm"
 case ":$PATH:" in
