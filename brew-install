@@ -2,6 +2,7 @@ brew install difftastic fzf tmux wget ag ripgrep bat fd jq starship bash neovim 
 
 brew install --cask alacritty
 brew install --cask raycast
+brew install --cask zed
 brew install --cask visual-studio-code
-brew install --cask webstorm
 brew install --cask font-iosevka-nerd-font
+
