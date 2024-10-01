@@ -1,0 +1,19 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space l a": "editor::ToggleCodeActions",
+      "g c c": "editor::ToggleComments",
+      "space f": "file_finder::Toggle",
+      "space F": "workspace::NewSearch",
+      "space o": "tab_switcher::Toggle",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  }
+]
