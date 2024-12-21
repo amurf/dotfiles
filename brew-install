@@ -6,3 +6,6 @@ brew install --cask zed
 brew install --cask visual-studio-code
 brew install --cask font-iosevka-nerd-font
 brew install orbstack
+brew install --cask betterdisplay
+brew install --cask deskpad
+brew install --cask hyperkey
