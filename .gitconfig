@@ -1,13 +1,18 @@
 [user]
-  name = amurf
-  email = ash.d.murphy@gmail.com
+	name = Ashley Murphy
+	email = ashley.murphy@okendo.io
 [push]
   default = matching
 [alias]
+  dlog = -c diff.external=difft log --ext-diff
+  dshow = -c diff.external=difft show --ext-diff
+  ddiff = -c diff.external=difft diff
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
   excludesfile = ~/.gitignore_global
   ignorecase = false
+	editor = nvim
+	pager = delta
 [color]
   ui = auto
 [color "branch"]
@@ -53,3 +58,11 @@
   rebase = true
 [rerere]
   enabled = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictstyle = zdiff3
+[rebase]
+	autoStash = true
