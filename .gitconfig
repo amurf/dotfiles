@@ -59,10 +59,12 @@
 [rerere]
   enabled = true
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [delta]
-	navigate = true
+  navigate = true
 [merge]
-	conflictstyle = zdiff3
+  conflictstyle = zdiff3
 [rebase]
-	autoStash = true
+  autoStash = true
+[init]	
+  defaultBranch = main
