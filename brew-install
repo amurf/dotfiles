@@ -1,5 +1,5 @@
 brew install difftastic fzf tmux wget ag ripgrep bat fd jq starship bash neovim fish asdf lazygit eza btop git-delta
-
+brew install --cask nikitabobko/tap/aerospace
 brew install --cask ghostty
 brew install --cask raycast
 brew install --cask zed
