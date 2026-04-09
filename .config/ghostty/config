@@ -1,0 +1,12 @@
+font-family = "Iosevka Nerd Font"
+font-size = 13
+
+# Theme - Ghostty has built-in Dracula theme
+theme = dracula
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Clipboard
+copy-on-select = clipboard
