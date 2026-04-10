@@ -1,17 +1,15 @@
 brew install difftastic fzf tmux wget ag ripgrep bat fd jq starship bash neovim fish asdf lazygit eza btop git-delta
+
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask ghostty
 brew install --cask raycast
 brew install --cask zed
 brew install --cask visual-studio-code
 brew install --cask font-iosevka-nerd-font
-brew install orbstack
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask orbstack
 brew install --cask betterdisplay
-brew install --cask deskpad
-brew install --cask hyperkey
 
 brew tap FelixKratz/formulae
 brew install borders
 brew install sketchybar
-
-
