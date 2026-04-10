@@ -9,3 +9,9 @@ brew install orbstack
 brew install --cask betterdisplay
 brew install --cask deskpad
 brew install --cask hyperkey
+
+brew tap FelixKratz/formulae
+brew install borders
+brew install sketchybar
+
+
