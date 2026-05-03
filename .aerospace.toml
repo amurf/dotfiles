@@ -22,14 +22,17 @@ exec-on-workspace-change = [
   'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
-# --- UI Gaps (Symmetry Corrected) ---
+# --- UI Gaps ---
 [gaps]
 inner.horizontal = 15
 inner.vertical   = 15
 outer.left       = 8
 outer.bottom     = 8
 outer.right      = 8
-outer.top        = 50  # Balanced for floating SketchyBar (8px margin + 34px height + 8px gap)
+# This array defines the top gap per monitor:
+# 1. If monitor name matches 'built-in', use 10px.
+# 2. Otherwise, default to 50px.
+outer.top = [{ monitor.'built-in' = 16 }, 50]
 
 # --- Key Bindings ---
 [key-mapping]
