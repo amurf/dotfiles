@@ -7,12 +7,29 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
+  "proxy": "",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  /* Duplicated key auto-commented: "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  }, */
+  "git_panel": {
+    "dock": "left"
+  },
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
-    "version": "2"
   },
   "theme": "Dracula",
   "buffer_font_family": "Iosevka Nerd Font",
@@ -34,25 +51,22 @@
   },
   "languages": {
     "JavaScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "formatter": []
     },
     "TypeScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "formatter": []
     },
     "Vue.js": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "formatter": []
     }
   }
 }
